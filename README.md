@@ -39,14 +39,14 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/your-repo/smart-car-project.git
-cd smart-car-project
+git clone https://github.com/ZhengLongBing/smart-car.git
+cd smart-car
 
 # 编译项目
 cargo build --release
 
 # 上传固件到微控制器
-cargo flash --release --chip your-chip-name
+cargo flash --release --chip stm32f103c8
 ```
 
 ## 文档
@@ -78,8 +78,8 @@ cargo flash --release --chip your-chip-name
 
 如果您有任何问题或者想要与我们联系，请通过以下方式：
 
-- Email: [your-email@example.com](mailto:your-email@example.com)
-- GitHub Issues: [https://github.com/your-repo/smart-car-project/issues](https://github.com/your-repo/smart-car-project/issues)
+- Email: [1211998648@qq.com](mailto:1211998648@qq.com)
+- GitHub Issues: [https://github.com/ZhengLongBing/smart-car/issues](https://github.com/ZhengLongBing/smart-car/issues)
 
 ---
 
