@@ -1,27 +1,28 @@
 {
-    "configurations": [
-    {
-        "type": "probe-rs-debug",
-        "request": "launch",
-        "name": "probe-rs-debug",
-        "cwd": "${workspaceFolder}",
-        "connectUnderReset": false,
-        "chip": "STM32F103C8Tx",
-        "runtimeExecutable": "probe-rs",
-        "runtimeArgs": ["dap-server"],
-        "flashingConfig": {
-            "flashingEnabled": true,
-            "haltAfterReset": false,
-        },
-        "coreConfigs": [
-            {
-                "coreIndex": 0,
-                "programBinary": "./target/thumbv7m-none-eabi/debug/smart_car",
-                "svdFile": "./stm32f103.svd",
-                "rttEnabled": true,
-            }
-        ],
-        "consoleLogLevel": "Console"
-    }
-    ]
+  "version": "0.2.0",
+  "configurations": [
+  {
+      "type": "probe-rs-debug",
+      "request": "launch",
+      "name": "probe-rs-debug",
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "cargo build",
+      "connectUnderReset": false,
+      "chip": "STM32F103C8",
+      "runtimeExecutable": "probe-rs",
+      "runtimeArgs": ["dap-server"],
+      "flashingConfig": {
+          "flashingEnabled": true,
+          "haltAfterReset": false,
+      },
+      "coreConfigs": [
+          {
+              "programBinary": "target/thumbv7m-none-eabi/debug/smart_car",
+              "svdFile": "stm32f103.svd",
+              "rttEnabled": true,
+          }
+      ],
+      "consoleLogLevel": "Console"
+  }
+  ]
 }
