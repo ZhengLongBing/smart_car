@@ -1,0 +1,27 @@
+{
+    "configurations": [
+    {
+        "type": "probe-rs-debug",
+        "request": "launch",
+        "name": "probe-rs-debug",
+        "cwd": "${workspaceFolder}",
+        "connectUnderReset": false,
+        "chip": "STM32F103C8Tx",
+        "runtimeExecutable": "probe-rs",
+        "runtimeArgs": ["dap-server"],
+        "flashingConfig": {
+            "flashingEnabled": true,
+            "haltAfterReset": false,
+        },
+        "coreConfigs": [
+            {
+                "coreIndex": 0,
+                "programBinary": "./target/thumbv7m-none-eabi/debug/smart_car",
+                "svdFile": "./stm32f103.svd",
+                "rttEnabled": true,
+            }
+        ],
+        "consoleLogLevel": "Console"
+    }
+    ]
+}
